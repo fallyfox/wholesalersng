@@ -5,7 +5,7 @@ import { BsTwitterX } from "react-icons/bs";
 
 export default function Signin() {
     return (
-        <main className="grid grid-cols-1 lg:grid-cols-2 my-6 md:my-8 lg:my-16">
+        <main className="grid grid-cols-1 lg:grid-cols-2 gap-6 lg:gap-0 my-6 md:my-8 lg:my-16">
             <div className="h-[220px] lg:h-[400px] signin-bg-img"></div>
 
             <article className="flex flex-col items-center px-4 md:px-8 lg:px-16">
