@@ -1,7 +1,7 @@
 "use server"
 import { auth } from "@/auth";
 import ServerAuthCheck from "@/config/ServerAuthCheck";
-import { My } from "./my";
+import { CompleteProfile } from "./complete-profile";
 
 export default async function Page() {
     const session = await auth();
@@ -9,7 +9,7 @@ export default async function Page() {
     return (
         <>
         <ServerAuthCheck/>
-        <My/>
+        <CompleteProfile userID={session?.user?.id}/>
         </>
     )
 }

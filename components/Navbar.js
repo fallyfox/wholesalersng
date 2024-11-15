@@ -42,7 +42,11 @@ export function Navbar () {
         <ul className="absolute top-[60px] w-full bg-white shadow-md flex flex-col gap-4 border-t border-gray-200 p-4">
             <li><Link href="#" className="text-sm text-gray-600">Categories</Link></li>
             <li><Link href="#" className="text-sm text-gray-600">Contact Us</Link></li>
+            { session?.user ?
+            <li><Link href="/my/profile" className="text-sm text-gray-600">Welcome {session.user.name.split(" ")[0]}</Link></li>
+            :
             <li><Link href="/auth/signin" className="text-sm text-gray-600">Signup</Link></li>
+            }
         </ul>
         :
         null
